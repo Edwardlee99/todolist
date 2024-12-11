@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "3a682ecd-e3c6-4d4a-ae4b-9c17428bef54",
+		"name": "Todolist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13859361"
+	},
+	"item": [
+		{
+			"name": "Create To do List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Task 1\",\r\n    \"description\" : \"test 1\",\r\n    \"created_at\": \"2011-05-09 13:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/todolists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todolists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all to do list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/todolists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todolists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update To do List",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Task 1\",\r\n    \"description\" : \"test 1\",\r\n    \"status\": \"pending\",\r\n    \"created_at\": \"2011-05-09 13:00:00\",\r\n    \"updated_at\": \"2011-05-10 08:45:23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/todolists/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todolists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete To do list",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/todolists/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todolists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
