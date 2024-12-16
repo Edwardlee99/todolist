@@ -26,7 +26,7 @@ export default function View() {
     }, []);
 
     const handleEdit = (id) => {
-        router.push(`/update/${id}`);
+        router.push(`/update?id=${id}`);
     };
 
     const handleDelete = async (id) => {
